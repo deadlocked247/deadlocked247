@@ -468,4 +468,39 @@ hr {
   .popup>.grid {
     margin-top: -1rem;
   }
+
+  .mac {
+    height: 40rem;
+    background-size: 125%;
+  }
+
+}
+
+@media (max-width: 550px) {
+  .cloud-1, .cloud-2, .cloud-3 {
+    display: none;
+  }
+}
+
+@media (max-width: 1260px) {
+
+  .mac {
+    width: 100%;
+    background-size: 40rem;
+    height: 30rem;
+  }
+  .cloud-1 {
+    background-image: url('../img/cloud-1.png');
+    width: 25rem;
+    height: 35rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    z-index: 0;
+    top: -17rem;
+    left: -14rem;
+    background-size: 100%;
+    animation: move-right 60s ease-out;
+  }
+
 }
