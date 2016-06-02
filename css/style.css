@@ -118,6 +118,12 @@ body::-webkit-scrollbar {
   text-align: center;
 }
 
+.padding-3 {
+  padding: 3rem;
+}
+
+
+
 .container {
   text-align: center;
   width: 100%;
@@ -216,7 +222,7 @@ pill {
   font-family: 'Proxima', sans-serif;
 }
 
-.col>img {
+.col>img, .row>img {
   border: 1px solid #EEEEEE;
   border-radius: .25rem;
   display: block;
@@ -225,6 +231,45 @@ pill {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+
+.row {
+  flex-wrap:wrap;
+  flex: 1;
+  margin: 1rem -2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.col-flex>.row:first-child {
+  margin: 1rem -2rem;
+  margin-bottom: 0;
+}
+
+.col-flex {
+  flex-direction: column;
+}
+
+.row>img {
+  margin-top: auto;
+  margin-bottom: auto;
+  flex: 1;
+  flex-grow: 1;
+  width: auto;
+  display: inline-block;
+  max-width: calc(33% - 2.5rem);
+  height: auto !important;
+  align-self: flex-start;
+  margin: 1rem;
+}
+
+.row>img:first-child {
+  margin-right: .5rem;
+}
+
+.row>img:last-child {
+  margin-left: .5rem;
+}
+
 
 .popup>.grid {
   width: 100%;
@@ -325,6 +370,8 @@ pill {
   flex: 1;
   padding: 1rem;
 }
+
+
 
 .modal-container {
    display: none;
@@ -446,10 +493,41 @@ hr {
   animation-duration: .75s !important;
 }
 
+.big {
+  width: 40rem !important;
+}
+
 @media (max-width: 960px) {
   .grid {
     display: block;
     width: 100%;
+  }
+  .add-padding {
+    padding: 4rem 0;
+  }
+  .col-flex>.row:first-child {
+    padding: 0;
+    margin: 0rem -1rem;
+    margin-top: 2.5rem;
+  }
+
+  .col-flex>.row {
+    margin: 0rem -1rem;
+  }
+
+  .popup {
+    max-width: 100%;
+    width: 30rem;
+    padding-top: 4rem;
+  }
+
+  .row>img, .big {
+    width: calc(100% - 2rem);
+    max-width: 100%;
+    display: block;
+    margin: auto !important;
+    align-self: center;
+    margin-bottom: 1rem !important;
   }
   .card {
     display: block;
@@ -460,7 +538,7 @@ hr {
   .col {
     padding: 0;
   }
-  .popup>.grid, .popup {
+  .popup>.grid, {
     width: calc(100% - 2rem);
     padding: 1rem;
     margin: auto;
@@ -474,20 +552,18 @@ hr {
     background-size: 125%;
   }
 
-}
-
-@media (max-width: 550px) {
-  .cloud-1, .cloud-2, .cloud-3 {
-    display: none;
+  .center>iframe {
+    width: 100%;
   }
+
 }
 
 @media (max-width: 1260px) {
 
   .mac {
     width: 100%;
-    background-size: 40rem;
-    height: 30rem;
+    background-size: 60rem;
+    height: 50rem;
   }
   .cloud-1 {
     background-image: url('../img/cloud-1.png');
@@ -503,4 +579,25 @@ hr {
     animation: move-right 60s ease-out;
   }
 
+}
+
+@media (max-width: 550px) {
+  .cloud-1, .cloud-2, .cloud-3 {
+    display: none;
+  }
+  .hero {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .mac {
+    width: 100%;
+    background-size: 125%;
+    height: 30rem;
+  }
+  .nav>ul>li {
+    display: none;
+  }
+  .nav>ul>li.action {
+    display: block;
+  }
 }
