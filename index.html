@@ -533,9 +533,17 @@
     </div>
   </body>
   <script src="js/jquery.js"></script>
+  <script src="js/typed.js"></script>
+
   <script src="js/wow.min.js"></script>
   <script>
   new WOW().init();
+  $(function(){
+      $(".hero>span").typed({
+        strings: ["user experiences", "people"],
+        typeSpeed: 40
+      });
+  });
 
   </script>
 
