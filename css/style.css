@@ -134,6 +134,7 @@ body::-webkit-scrollbar {
 }
 
 .me-btn {
+  animation-delay: 1s;
   background-color: white;
   color: #FF6438;
   display: inline;
@@ -596,11 +597,44 @@ hr {
   left: -8rem;
   float: left;
 }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: .2;
+  }
+}
+
+#fb>img {
+  animation: 0.25s fade-in ease-out;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+#tw>img {
+  animation: 0.25s fade-in ease-out;
+  animation-delay: 1.25s;
+  animation-fill-mode: both;
+}
+
+#ln>img {
+  animation: 0.25s fade-in ease-out;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
+}
+
+#ig>img {
+  animation: 0.25s fade-in ease-out;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+}
+
 .social>a {
   text-decoration: none;
 }
 .social>a>img {
-  opacity: 0.2;
   margin-right: .75rem;
   height: 1.5rem;
   width: 1.5rem;
