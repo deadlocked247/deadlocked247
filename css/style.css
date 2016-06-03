@@ -187,6 +187,12 @@ body::-webkit-scrollbar {
   text-align: left;
 }
 
+.meh>.title>i {
+  height: 2rem;
+  padding-left: 1rem;
+  width: 2rem;
+}
+
 .center {
   text-align: center;
 }
@@ -653,6 +659,12 @@ hr {
   animation-fill-mode: both;
 }
 
+#gh>img {
+  animation: 0.25s fade-in ease-out;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+
 .social>a {
   text-decoration: none;
 }
@@ -744,6 +756,55 @@ space {
 .sticky {
   bottom: 0;
 }
+
+.sticky {
+  height: 100%;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sticky>.grid {
+  margin-bottom: 0;
+}
+
+.me>.title>i {
+  font-size: 0.5rem;
+}
+
+@media (max-width: 1260px) {
+
+  .arrow-up {
+    right: 2rem;
+    bottom: 2rem;
+  }
+
+  .mac {
+    width: 100%;
+    background-size: 60rem;
+    height: 50rem;
+  }
+  .cloud-1 {
+    background-image: url('../img/cloud-1.png');
+    width: 25rem;
+    height: 35rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    z-index: 0;
+    top: -17rem;
+    left: -14rem;
+    background-size: 100%;
+    animation: move-right 60s ease-out;
+  }
+
+
+}
+
+.or-my-son {
+  display: none;
+}
+
 @media (max-width: 960px) {
   .grid {
     display: block;
@@ -802,7 +863,6 @@ space {
   .popup>.grid {
     margin-top: -1rem;
   }
-
   .mac {
     height: 40rem;
     background-size: 125%;
@@ -813,6 +873,7 @@ space {
   }
 
   .arrow-up {
+    right: 2rem;
     bottom: 2rem;
   }
 
@@ -843,48 +904,8 @@ space {
   }
 
 }
-.sticky {
-  height: 100%;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.sticky>.grid {
-  margin-bottom: 0;
-}
-
-.me>.title>i {
-  font-size: 0.5rem;
-}
-
-@media (max-width: 1260px) {
-
-  .mac {
-    width: 100%;
-    background-size: 60rem;
-    height: 50rem;
-  }
-  .cloud-1 {
-    background-image: url('../img/cloud-1.png');
-    width: 25rem;
-    height: 35rem;
-    background-repeat: no-repeat;
-    background-position: center center;
-    position: absolute;
-    z-index: 0;
-    top: -17rem;
-    left: -14rem;
-    background-size: 100%;
-    animation: move-right 60s ease-out;
-  }
 
 
-}
-
-.or-my-son {
-  display: none;
-}
 
 @media (max-width: 700px) {
   .nav>ul>a>li {
@@ -900,6 +921,10 @@ space {
   .meh>.sub, .meh>.title {
     text-align: center;
 
+  }
+
+  .sticky {
+    position: static;
   }
 
   .meh>title {
@@ -952,6 +977,7 @@ space {
     bottom: 1rem;
     height: 4rem;
     width: 4rem;
+    right: 1rem;
   }
   .arrow-up:hover {
     opacity: 1;
@@ -980,4 +1006,16 @@ space {
   .nav>ul {
     padding: 0px;
   }
+  pill {
+    display: inline-block;
+  }
+  .pill-container {
+    margin: 0;
+    padding-bottom:0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
 }
