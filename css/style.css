@@ -591,6 +591,8 @@ hr {
   background-image: url('../img/tinder/cover-m.png');
 }
 
+
+
 .card {
   filter: gray; /* IE6-9 */
   -webkit-filter: grayscale(100%);
@@ -607,6 +609,8 @@ hr {
 }
 
 
+
+
 .card:after {
   transition: .1s all ease-out;
   content: "";
@@ -618,6 +622,28 @@ hr {
 
 .card:hover:after {
   background-color: rgba(256, 256, 256, 0);
+}
+
+.sponge-card {
+  background-color: white;
+  height: 23rem;
+  background-position: center top;
+  background-image: url('../img/sponge/cover.png');
+}
+
+
+.life-card {
+  background-color: white;
+  background-size: 130%;
+  height: 17rem;
+  background-position: center top;
+  background-image: url('../img/life/mockup_landing.png');
+}
+
+.crash-card {
+  height: 20rem;
+  background-size: 200%;
+  background-image: url('../img/crash/cover.jpg');
 }
 
 .card:hover {
@@ -856,6 +882,10 @@ space {
 }
 
 @media (max-width: 960px) {
+
+  .life-card {
+    height: 31rem;
+  }
 
   .tinder-card {
     height: 29rem;
