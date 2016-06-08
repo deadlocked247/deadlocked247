@@ -224,7 +224,7 @@ body::-webkit-scrollbar {
   background-position: center center;
   background-size: 100%;
   display: inline-block;
-  z-index: 2;
+  z-index: 0;
   position: relative;
 }
 
@@ -307,6 +307,7 @@ pill {
   width: 4rem;
   z-index: 1;
   padding: 1rem 2rem;
+  min-width: 4rem;
 }
 
 .col>img, .row>img {
@@ -502,6 +503,8 @@ pill {
   padding: 8rem 0rem;
   margin: auto;
   padding-bottom: 4rem;
+  position: relative;
+  z-index: 1;
 }
 
 .title {
@@ -582,10 +585,16 @@ hr {
   transform: rotate(0deg);
 }
 
+.tinder-card {
+  background-color: white;
+  height: 26rem;
+  background-image: url('../img/tinder/cover-m.png');
+}
+
 .card {
   filter: gray; /* IE6-9 */
   -webkit-filter: grayscale(100%);
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   background-color: #FCFCFC;
   border-radius: .25rem;
   width: 100%;
@@ -595,11 +604,23 @@ hr {
   background-position: center center;
   transition: .1s all ease-out;
   cursor: pointer;
-  opacity: 0.75;
+}
+
+
+.card:after {
+  transition: .1s all ease-out;
+  content: "";
+  background-color: rgba(256, 256, 256, 0.25);
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.card:hover:after {
+  background-color: rgba(256, 256, 256, 0);
 }
 
 .card:hover {
-  opacity: 1;
   filter: none; /* IE6-9 */
   -webkit-filter: grayscale(0%);
 }
@@ -729,7 +750,7 @@ space {
 }
 
 .push-up {
-  margin-top: -8rem;
+  margin-top: -10rem;
 }
 
 .img-fill {
@@ -737,6 +758,19 @@ space {
   margin-bottom: 3rem;
   width: 100%;
   display: block;
+}
+
+.passkey-card {
+  background-size: cover;
+  height: 18rem;
+  background-position: 88% 110%;
+  background-image: url('../img/apps/header.jpg');
+}
+
+.attend-card {
+  background-size: cover;
+  height: 18rem;
+  background-image: url('../img/attend/cover.jpg');
 }
 
 .img-fill>.sub {
@@ -748,6 +782,14 @@ space {
 }
 .fill-less {
   max-width: 40rem;
+}
+
+.fill-lesser {
+  max-width: 30rem;
+}
+
+.fill-lesserer {
+  max-width: 20rem;
 }
 
 .img-fill>img {
@@ -772,6 +814,12 @@ space {
 
 .me>.title>i {
   font-size: 0.5rem;
+}
+
+.coffee-card {
+  height: 14rem;
+  background-size: 130%;
+  background-image: url('../img/coffeebar.jpeg');
 }
 
 @media (max-width: 1260px) {
@@ -808,6 +856,15 @@ space {
 }
 
 @media (max-width: 960px) {
+
+  .tinder-card {
+    height: 29rem;
+  }
+
+  .coffee-card {
+    height: 16rem;
+  }
+
   .grid {
     display: block;
     width: 100%;
@@ -866,8 +923,8 @@ space {
     margin-top: -1rem;
   }
   .mac {
-    height: 40rem;
-    background-size: 125%;
+    height: 42rem;
+    background-size: contain;
   }
 
   .center>iframe {
@@ -905,6 +962,10 @@ space {
     padding-bottom: 0px;
   }
 
+  .attend-card {
+    height: 20rem;
+  }
+
 }
 
 
@@ -916,6 +977,12 @@ space {
   .nav>ul>a>li.action {
     display: block;
   }
+  .mac {
+    height: 35rem;
+  }
+  .push-up {
+    margin-top: -6rem;
+  }
 }
 
 @media (max-width: 550px) {
@@ -925,6 +992,12 @@ space {
 
   }
 
+  .mac {
+    margin-top: 1rem;
+    min-width: 300px;
+    max-height: 37rem;
+    background-image: url('../img/tinder/cover-m.png');
+  }
   .sticky {
     position: static;
   }
@@ -945,6 +1018,10 @@ space {
   .me {
     margin-top: 8rem;
     margin-bottom: 4rem;
+  }
+
+  .push-up {
+    margin: 0px;
   }
   .cloud-1, .cloud-2, .cloud-3 {
     display: none;
@@ -988,15 +1065,7 @@ space {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  .mac {
-    width: 100%;
-    background-size: 125%;
-    height: 30rem;
-  }
 
-  .push-up {
-    margin-top: -4rem;
-  }
   .popup {
     padding: 1rem;
     padding-top: 2rem;
@@ -1007,6 +1076,9 @@ space {
   }
   .nav>ul {
     padding: 0px;
+  }
+  .hero {
+    padding-top: 1rem;
   }
   pill {
     display: inline-block;
